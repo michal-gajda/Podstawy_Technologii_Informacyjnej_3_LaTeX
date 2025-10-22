@@ -1,0 +1,43 @@
+name: Build Multiple LaTeX PDFs and Release
+
+on:
+  push:
+    paths:
+      - '**.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            Z31_Gajda.tex
+            Z32_Gajda.tex
+            Z33_Gajda.tex
+            Z34_Gajda.tex
+
+      - name: Rename PDFs (optional but tidy)
+        run: |
+          mv Z31_Gajda.pdf Z31_Gajda.pdf
+          mv Z32_Gajda.pdf Z32_Gajda.pdf
+          mv Z33_Gajda.pdf Z33_Gajda.pdf
+          mv Z34_Gajda.pdf Z34_Gajda.pdf
+
+      - name: Create release with all PDFs
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "release-tex-${{ github.run_number }}"
+          name: "LaTeX Multi PDF Release ${{ github.run_number }}"
+          files: |
+            Z31_Gajda.pdf
+            Z32_Gajda.pdf
+            Z33_Gajda.pdf
+            Z34_Gajda.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
