@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '**.tex'
+      - '.github/workflows/**/*.yml'
 
 permissions:
   contents: write
