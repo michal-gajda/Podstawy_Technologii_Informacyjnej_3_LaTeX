@@ -22,13 +22,6 @@ jobs:
             Z33_Gajda.tex
             Z34_Gajda.tex
 
-      - name: Rename PDFs (optional but tidy)
-        run: |
-          mv Z31_Gajda.pdf Z31_Gajda.pdf
-          mv Z32_Gajda.pdf Z32_Gajda.pdf
-          mv Z33_Gajda.pdf Z33_Gajda.pdf
-          mv Z34_Gajda.pdf Z34_Gajda.pdf
-
       - name: Create release with all PDFs
         uses: softprops/action-gh-release@v2
         with:
