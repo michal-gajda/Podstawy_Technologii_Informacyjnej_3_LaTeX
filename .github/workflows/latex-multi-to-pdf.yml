@@ -23,7 +23,8 @@ jobs:
           root_file: |
             Z31_Gajda.tex
             Z32_Gajda.tex
-            Z33_Gajda.tex
+            Z33A_Gajda.tex
+            Z33B_Gajda.tex
             Z34_Gajda.tex
 
       - name: Create release with all PDFs
@@ -34,7 +35,8 @@ jobs:
           files: |
             Z31_Gajda.pdf
             Z32_Gajda.pdf
-            Z33_Gajda.pdf
+            Z33A_Gajda.pdf
+            Z33B_Gajda.pdf
             Z34_Gajda.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
