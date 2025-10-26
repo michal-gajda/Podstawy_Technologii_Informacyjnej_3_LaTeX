@@ -1,0 +1,3 @@
+# Podstawy technologii informacyjnej - Ćwiczenie 3
+
+Kod źródłowy dostępny jest pod adresem [https://github.com/michal-gajda/Podstawy_Technologii_Informacyjnej_3_LaTeX](https://github.com/michal-gajda/Podstawy_Technologii_Informacyjnej_3_LaTeX), wygenerowane pliki PDF są dostępne do pobrania [https://github.com/michal-gajda/Podstawy_Technologii_Informacyjnej_3_LaTeX/releases](https://github.com/michal-gajda/Podstawy_Technologii_Informacyjnej_3_LaTeX/releases)
